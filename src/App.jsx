@@ -9,7 +9,7 @@ const App = () => {
   const [selectedFont, setSelectedFont] = useState("Arial");
   const [selectedSize, setSelectedSize] = useState("16px");
   const [selectedColor, setSelectedColor] = useState("black");
-  const [text, setText] = useState("Enter your custom text here.");
+  const [text, setText] = useState("text here ");
   const [additionalTexts, setAdditionalTexts] = useState([]);
 
   const handleFontChange = (font) => {
@@ -33,8 +33,8 @@ const App = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-10 h-screen bg-zinc-300">
-      <div className="bg-zinc-200 w-[50%] h-[80vh] rounded-lg shadow-lg pl-10 pt-10">
+    <div className="flex items-center lg:justify-center lg:gap-10 gap-5 h-screen bg-zinc-300 lg:flex-row flex-col">
+      <div className="bg-zinc-200 lg:w-[50%] lg:h-[80vh] w-full h-[30%] rounded-lg shadow-lg pl-10 pt-10">
         <h1
           className="text-xl font-bold"
           style={{
@@ -61,7 +61,7 @@ const App = () => {
         ))}
       </div>
 
-      <div className="bg-zinc-200 rounded-lg shadow h-[80vh] w-[25%] flex flex-col items-start pl-5 gap-3 pt-10">
+      <div className="bg-zinc-200 rounded-lg shadow lg:h-[80vh] lg:w-[25%] w-full py-10 flex flex-col items-start pl-5 gap-3 pt-10">
         <FontSelector
           selectedFont={selectedFont}
           onSelectFont={handleFontChange}
